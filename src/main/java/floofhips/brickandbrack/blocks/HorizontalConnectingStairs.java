@@ -26,10 +26,10 @@ import static net.minecraft.block.SlabBlock.TYPE;
 
 public class HorizontalConnectingStairs extends StairsBlock {
 
-	public static final DirectionProperty FACING = HorizontalBlock.FACING;
-	public static final EnumProperty<Half> HALF = BlockStateProperties.HALF;
-	public static final EnumProperty<StairsShape> SHAPE = BlockStateProperties.STAIRS_SHAPE;
-	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+//	public static final DirectionProperty FACING = HorizontalBlock.FACING;
+//	public static final EnumProperty<Half> HALF = BlockStateProperties.HALF;
+//	public static final EnumProperty<StairsShape> SHAPE = BlockStateProperties.STAIRS_SHAPE;
+//	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
 	public HorizontalConnectingStairs(Supplier<BlockState> state, Properties properties) {
 		super(state, properties);
@@ -48,7 +48,7 @@ public class HorizontalConnectingStairs extends StairsBlock {
 		return blockstate.setValue(SHAPE, getShape(blockstate, context.getLevel(), blockpos));
 		}
 
-
+	//Returns the shape a block should take based on its neighbors.
 	private static StairsShape getShape(BlockState state, IBlockReader world, BlockPos pos) {
 		Direction direction = state.getValue(FACING);
 
@@ -79,9 +79,9 @@ public class HorizontalConnectingStairs extends StairsBlock {
 		if (neighborState.getBlock() instanceof HorizontalConnectingSlab)
 			return (neighborState.getValue(TYPE) == SlabType.BOTTOM) == (thisState.getValue(HALF) == Half.BOTTOM);
 		if (neighborState.getBlock() instanceof HorizontalConnectingBlock)
-			return thisState.getValue(HALF) != Half.BOTTOM;
+			return thisState.getValue(HALF) == Half.BOTTOM || thisState.getValue(HALF) == Half.TOP;
 		if (neighborState.getBlock() instanceof StairsBlock)
-			return neighborState.getValue(BlockStateProperties.HALF) == Half.BOTTOM && thisState.getValue(HALF) == Half.BOTTOM;
+			return neighborState.getValue(BlockStateProperties.HALF) == Half.BOTTOM && thisState.getValue(HALF) == Half.BOTTOM || neighborState.getValue(BlockStateProperties.HALF) == Half.TOP && thisState.getValue(HALF) == Half.TOP;
 		return false;
 	}
 	public BlockState updateShape(BlockState thisState, Direction directionToNeighbor, BlockState neighborState, IWorld world, BlockPos thisPos, BlockPos neighborPos) {

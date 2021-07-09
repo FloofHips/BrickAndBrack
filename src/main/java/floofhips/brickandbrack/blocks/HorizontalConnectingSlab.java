@@ -88,14 +88,13 @@ public class HorizontalConnectingSlab extends SlabBlock {
 			if (neighborState.getBlock() instanceof HorizontalConnectingBlock)
 				return thisState.getValue(TYPE) != SlabType.BOTTOM;
 			if (neighborState.getBlock() instanceof StairsBlock)
-				return neighborState.getValue(BlockStateProperties.HALF) == Half.BOTTOM && thisState.getValue(TYPE) == SlabType.BOTTOM;
+				return neighborState.getValue(BlockStateProperties.HALF) == Half.BOTTOM && thisState.getValue(TYPE) == SlabType.BOTTOM || neighborState.getValue(BlockStateProperties.HALF) == Half.TOP && thisState.getValue(TYPE) == SlabType.TOP;
 	        return false;
 	    }
 	
 	public BlockState updateShape(BlockState thisState, Direction directionToNeighbor, BlockState neighborState, IWorld world, BlockPos thisPos, BlockPos neighborPos) {
         if (thisState.getValue(WATERLOGGED))
             world.getLiquidTicks().scheduleTick(thisPos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
-        
         return directionToNeighbor.getAxis().isHorizontal() ? thisState.setValue(SHAPE, getShape(thisState, world, thisPos)) : super.updateShape(thisState, directionToNeighbor, neighborState, world, thisPos, neighborPos);
     }
 
