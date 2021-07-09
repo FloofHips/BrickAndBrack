@@ -1,0 +1,229 @@
+{
+  "variants": {
+    "facing=east,type=bottom,shape=inner_left": {
+      "model": "brickandbrack:block/roofing_slab_bottom_inner",
+      "y": 270
+    },
+    "facing=east,type=bottom,shape=inner_right": {
+      "model": "brickandbrack:block/roofing_slab_bottom_inner"
+    },
+    "facing=east,type=bottom,shape=outer_left": {
+      "model": "brickandbrack:block/roofing_slab_bottom_outer",
+      "y": 270
+    },
+    "facing=east,type=bottom,shape=outer_right": {
+      "model": "brickandbrack:block/roofing_slab_bottom_outer"
+    },
+    "facing=east,type=bottom,shape=straight": {
+      "model": "brickandbrack:block/roofing_slab_bottom"
+    },
+    "facing=north,type=bottom,shape=inner_left": {
+      "model": "brickandbrack:block/roofing_slab_bottom_inner",
+      "y": 180
+    },
+    "facing=north,type=bottom,shape=inner_right": {
+      "model": "brickandbrack:block/roofing_slab_bottom_inner",
+      "y": 270
+    },
+    "facing=north,type=bottom,shape=outer_left": {
+      "model": "brickandbrack:block/roofing_slab_bottom_outer",
+      "y": 180
+    },
+    "facing=north,type=bottom,shape=outer_right": {
+      "model": "brickandbrack:block/roofing_slab_bottom_outer",
+      "y": 270
+    },
+    "facing=north,type=bottom,shape=straight": {
+      "model": "brickandbrack:block/roofing_slab_bottom",
+      "y": 270
+    },
+    "facing=south,type=bottom,shape=inner_left": {
+      "model": "brickandbrack:block/roofing_slab_bottom_inner"
+    },
+    "facing=south,type=bottom,shape=inner_right": {
+      "model": "brickandbrack:block/roofing_slab_bottom_inner",
+      "y": 90
+    },
+    "facing=south,type=bottom,shape=outer_left": {
+      "model": "brickandbrack:block/roofing_slab_bottom_outer"
+    },
+    "facing=south,type=bottom,shape=outer_right": {
+      "model": "brickandbrack:block/roofing_slab_bottom_outer",
+      "y": 90
+    },
+    "facing=south,type=bottom,shape=straight": {
+      "model": "brickandbrack:block/roofing_slab_bottom",
+      "y": 90
+    },
+    "facing=west,type=bottom,shape=inner_left": {
+      "model": "brickandbrack:block/roofing_slab_bottom_inner",
+      "y": 90
+    },
+    "facing=west,type=bottom,shape=inner_right": {
+      "model": "brickandbrack:block/roofing_slab_bottom_inner",
+      "y": 180
+    },
+    "facing=west,type=bottom,shape=outer_left": {
+      "model": "brickandbrack:block/roofing_slab_bottom_outer",
+      "y": 90
+    },
+    "facing=west,type=bottom,shape=outer_right": {
+      "model": "brickandbrack:block/roofing_slab_bottom_outer",
+      "y": 180
+    },
+    "facing=west,type=bottom,shape=straight": {
+      "model": "brickandbrack:block/roofing_slab_bottom",
+      "y": 180
+    },
+    "facing=east,type=top,shape=inner_left": {
+      "model": "brickandbrack:block/roofing_slab_top_inner",
+      "y": 270
+    },
+    "facing=east,type=top,shape=inner_right": {
+      "model": "brickandbrack:block/roofing_slab_top_inner"
+    },
+    "facing=east,type=top,shape=outer_left": {
+      "model": "brickandbrack:block/roofing_slab_top_outer",
+      "y": 270
+    },
+    "facing=east,type=top,shape=outer_right": {
+      "model": "brickandbrack:block/roofing_slab_top_outer"
+    },
+    "facing=east,type=top,shape=straight": {
+      "model": "brickandbrack:block/roofing_slab_top"
+    },
+    "facing=north,type=top,shape=inner_left": {
+      "model": "brickandbrack:block/roofing_slab_top_inner",
+      "y": 180
+    },
+    "facing=north,type=top,shape=inner_right": {
+      "model": "brickandbrack:block/roofing_slab_top_inner",
+      "y": 270
+    },
+    "facing=north,type=top,shape=outer_left": {
+      "model": "brickandbrack:block/roofing_slab_top_outer",
+      "y": 180
+    },
+    "facing=north,type=top,shape=outer_right": {
+      "model": "brickandbrack:block/roofing_slab_top_outer",
+      "y": 270
+    },
+    "facing=north,type=top,shape=straight": {
+      "model": "brickandbrack:block/roofing_slab_top",
+      "y": 270
+    },
+    "facing=south,type=top,shape=inner_left": {
+      "model": "brickandbrack:block/roofing_slab_top_inner"
+    },
+    "facing=south,type=top,shape=inner_right": {
+      "model": "brickandbrack:block/roofing_slab_top_inner",
+      "y": 90
+    },
+    "facing=south,type=top,shape=outer_left": {
+      "model": "brickandbrack:block/roofing_slab_top_outer"
+    },
+    "facing=south,type=top,shape=outer_right": {
+      "model": "brickandbrack:block/roofing_slab_top_outer",
+      "y": 90
+    },
+    "facing=south,type=top,shape=straight": {
+      "model": "brickandbrack:block/roofing_slab_top",
+      "y": 90
+    },
+    "facing=west,type=top,shape=inner_left": {
+      "model": "brickandbrack:block/roofing_slab_top_inner",
+      "y": 90
+    },
+    "facing=west,type=top,shape=inner_right": {
+      "model": "brickandbrack:block/roofing_slab_top_inner",
+      "y": 180
+    },
+    "facing=west,type=top,shape=outer_left": {
+      "model": "brickandbrack:block/roofing_slab_top_outer",
+      "y": 90
+    },
+    "facing=west,type=top,shape=outer_right": {
+      "model": "brickandbrack:block/roofing_slab_top_outer",
+      "y": 180
+    },
+    "facing=west,type=top,shape=straight": {
+      "model": "brickandbrack:block/roofing_slab_top",
+      "y": 180
+    },
+    "facing=east,type=double,shape=inner_left": {
+      "model": "brickandbrack:block/roofing_block_inner",
+      "y": 270
+    },
+    "facing=east,type=double,shape=inner_right": {
+      "model": "brickandbrack:block/roofing_block_inner"
+    },
+    "facing=east,type=double,shape=outer_left": {
+      "model": "brickandbrack:block/roofing_block_outer",
+      "y": 270
+    },
+    "facing=east,type=double,shape=outer_right": {
+      "model": "brickandbrack:block/roofing_block_outer"
+    },
+    "facing=east,type=double,shape=straight": {
+      "model": "brickandbrack:block/roofing_block"
+    },
+    "facing=north,type=double,shape=inner_left": {
+      "model": "brickandbrack:block/roofing_block_inner",
+      "y": 180
+    },
+    "facing=north,type=double,shape=inner_right": {
+      "model": "brickandbrack:block/roofing_block_inner",
+      "y": 270
+    },
+    "facing=north,type=double,shape=outer_left": {
+      "model": "brickandbrack:block/roofing_block_outer",
+      "y": 180
+    },
+    "facing=north,type=double,shape=outer_right": {
+      "model": "brickandbrack:block/roofing_block_outer",
+      "y": 270
+    },
+    "facing=north,type=double,shape=straight": {
+      "model": "brickandbrack:block/roofing_block",
+      "y": 270
+    },
+    "facing=south,type=double,shape=inner_left": {
+      "model": "brickandbrack:block/roofing_block_inner"
+    },
+    "facing=south,type=double,shape=inner_right": {
+      "model": "brickandbrack:block/roofing_block_inner",
+      "y": 90
+    },
+    "facing=south,type=double,shape=outer_left": {
+      "model": "brickandbrack:block/roofing_block_outer"
+    },
+    "facing=south,type=double,shape=outer_right": {
+      "model": "brickandbrack:block/roofing_block_outer",
+      "y": 90
+    },
+    "facing=south,type=double,shape=straight": {
+      "model": "brickandbrack:block/roofing_block",
+      "y": 90
+    },
+    "facing=west,type=double,shape=inner_left": {
+      "model": "brickandbrack:block/roofing_block_inner",
+      "y": 90
+    },
+    "facing=west,type=double,shape=inner_right": {
+      "model": "brickandbrack:block/roofing_block_inner",
+      "y": 180
+    },
+    "facing=west,type=double,shape=outer_left": {
+      "model": "brickandbrack:block/roofing_block_outer",
+      "y": 90
+    },
+    "facing=west,type=double,shape=outer_right": {
+      "model": "brickandbrack:block/roofing_block_outer",
+      "y": 180
+    },
+    "facing=west,type=double,shape=straight": {
+      "model": "brickandbrack:block/roofing_block",
+      "y": 180
+    }
+  }
+}
