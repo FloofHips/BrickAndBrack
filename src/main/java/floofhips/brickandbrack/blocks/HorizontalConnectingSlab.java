@@ -42,7 +42,8 @@ public class HorizontalConnectingSlab extends SlabBlock {
 	        BlockState existingBlockstate = context.getLevel().getBlockState(blockpos);
 	        BlockState blockstate = this.defaultBlockState();
 	        if (existingBlockstate.is(this)) {
-	            blockstate = blockstate.setValue(TYPE, SlabType.DOUBLE)
+	            blockstate = blockstate.setValue(FACING, context.getHorizontalDirection())
+	            		.setValue(TYPE, SlabType.DOUBLE)
 	            		.setValue(WATERLOGGED, Boolean.valueOf(false));
 	            return blockstate.setValue(SHAPE, getShape(blockstate, context.getLevel(), blockpos));
 	        } else {
@@ -87,8 +88,8 @@ public class HorizontalConnectingSlab extends SlabBlock {
 				return (neighborState.getValue(TYPE) == SlabType.BOTTOM) == (thisState.getValue(TYPE) == SlabType.BOTTOM);
 			if (neighborState.getBlock() instanceof HorizontalConnectingBlock)
 				return thisState.getValue(TYPE) != SlabType.BOTTOM;
-			if (neighborState.getBlock() instanceof StairsBlock)
-				return neighborState.getValue(BlockStateProperties.HALF) == Half.BOTTOM && thisState.getValue(TYPE) == SlabType.BOTTOM || neighborState.getValue(BlockStateProperties.HALF) == Half.TOP && thisState.getValue(TYPE) == SlabType.TOP;
+			//if (neighborState.getBlock() instanceof StairsBlock)
+			//	return neighborState.getValue(BlockStateProperties.HALF) == Half.BOTTOM && thisState.getValue(TYPE) == SlabType.BOTTOM || neighborState.getValue(BlockStateProperties.HALF) == Half.TOP && thisState.getValue(TYPE) == SlabType.TOP;
 	        return false;
 	    }
 	

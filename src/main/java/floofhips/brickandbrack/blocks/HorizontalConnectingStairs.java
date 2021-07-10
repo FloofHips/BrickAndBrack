@@ -76,10 +76,10 @@ public class HorizontalConnectingStairs extends StairsBlock {
 
 	//Returns true if the neighboring blockstate should be able to affect the shape of "this" blockstate.
 	public static boolean canConnect(BlockState thisState, BlockState neighborState) {
-		if (neighborState.getBlock() instanceof HorizontalConnectingSlab)
-			return (neighborState.getValue(TYPE) == SlabType.BOTTOM) == (thisState.getValue(HALF) == Half.BOTTOM);
-		if (neighborState.getBlock() instanceof HorizontalConnectingBlock)
-			return thisState.getValue(HALF) == Half.BOTTOM || thisState.getValue(HALF) == Half.TOP;
+		//if (neighborState.getBlock() instanceof HorizontalConnectingSlab)
+		//	return (neighborState.getValue(TYPE) == SlabType.BOTTOM) == (thisState.getValue(HALF) == Half.BOTTOM);
+		//if (neighborState.getBlock() instanceof HorizontalConnectingBlock)
+		//	return thisState.getValue(HALF) == Half.BOTTOM || thisState.getValue(HALF) == Half.TOP;
 		if (neighborState.getBlock() instanceof StairsBlock)
 			return neighborState.getValue(BlockStateProperties.HALF) == Half.BOTTOM && thisState.getValue(HALF) == Half.BOTTOM || neighborState.getValue(BlockStateProperties.HALF) == Half.TOP && thisState.getValue(HALF) == Half.TOP;
 		return false;

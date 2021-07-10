@@ -18,14 +18,9 @@ import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
-
 import static net.minecraft.block.SlabBlock.TYPE;
-import static net.minecraft.block.SlabBlock.WATERLOGGED;
 
 public class HorizontalConnectingBlock extends HorizontalBlock {
-
-
-	public static final DirectionProperty FACING = HorizontalBlock.FACING;
 	public static final EnumProperty<StairsShape> SHAPE = BlockStateProperties.STAIRS_SHAPE;
 
 	public HorizontalConnectingBlock(Properties properties) {
@@ -72,11 +67,11 @@ public class HorizontalConnectingBlock extends HorizontalBlock {
 	//Returns true if the neighboring blockstate should be able to affect the shape of "this" blockstate.
 	public static boolean canConnect(BlockState thisState, BlockState neighborState) {
 		if (neighborState.getBlock() instanceof HorizontalConnectingSlab)
-			return (neighborState.getValue(TYPE) == SlabType.TOP);
+			return (neighborState.getValue(TYPE) != SlabType.BOTTOM);
 		if (neighborState.getBlock() instanceof HorizontalConnectingBlock)
-			return neighborState.getValue(SHAPE) == neighborState.getValue(SHAPE); // hey if it works it works ok
-		if (neighborState.getBlock() instanceof StairsBlock)
-			return neighborState.getValue(BlockStateProperties.HALF) == Half.BOTTOM;
+			return true;
+		//if (neighborState.getBlock() instanceof StairsBlock)
+		//	return neighborState.getValue(BlockStateProperties.HALF) == Half.BOTTOM;
 		return false;
 	}
 
