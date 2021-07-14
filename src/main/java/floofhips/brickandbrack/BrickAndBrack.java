@@ -1,8 +1,11 @@
 package floofhips.brickandbrack;
 
+import floofhips.brickandbrack.init.BlockInit;
 import floofhips.brickandbrack.init.InitContent;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -39,6 +42,8 @@ public class BrickAndBrack
         // Register the doClientStuff method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
+
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -70,6 +75,11 @@ public class BrickAndBrack
     public void onServerStarting(FMLServerStartingEvent event) {
         // do something when the server starts
         LOGGER.info("HELLO from server starting");
+    }
+
+    private void clientSetup(final FMLClientSetupEvent event) {
+        RenderTypeLookup.setRenderLayer(BlockInit.BUSH_BLOCK.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.LATTICE_BLOCK.get(), RenderType.cutout());
     }
 
 }

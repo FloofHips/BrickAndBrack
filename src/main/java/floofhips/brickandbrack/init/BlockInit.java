@@ -23,9 +23,13 @@ public class BlockInit {
 
     // Plants
 
+    public static final RegistryObject<Block> BUSH_BLOCK = register("bush_block", () -> new Block(AbstractBlock.Properties.of(Material.DECORATION).strength(0.2F).sound(SoundType.SWEET_BERRY_BUSH).noOcclusion()));
+
     // LightSources
 
     // Panes
+
+    public static final RegistryObject<Block> LATTICE_BLOCK = register("lattice_block", () -> new PaneBlock(AbstractBlock.Properties.of(Material.DECORATION).strength(2,2).harvestLevel(0).harvestTool(ToolType.AXE).requiresCorrectToolForDrops().sound(SoundType.SCAFFOLDING)));
 
     //Vanilla+ (Block Variations)
 
