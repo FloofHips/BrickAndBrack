@@ -2,7 +2,7 @@
     "ambientocclusion": false,
     "textures": {
         "particle": "brickandbrack:block/lattice_block",
-        "edge": "brickandbrack:block/lattice_block"
+        "edge": "brickandbrack:block/lattice_block_ends"
     },
     "elements": [
         {   "from": [ 7, 0.001, 7 ],

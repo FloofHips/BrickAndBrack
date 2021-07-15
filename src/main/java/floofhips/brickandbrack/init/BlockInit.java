@@ -33,6 +33,9 @@ public class BlockInit {
 
     //Vanilla+ (Block Variations)
 
+    public static final RegistryObject<Block> PEBBLED_DIRT = register("pebbled_dirt", () -> new Block(AbstractBlock.Properties.of(Material.DECORATION).strength(5, 11).harvestLevel(0).harvestTool(ToolType.SHOVEL).sound(SoundType.BASALT)));
+    public static final RegistryObject<Block> DIRTY_PEBBLES = register("dirty_pebbles", () -> new Block(AbstractBlock.Properties.of(Material.DECORATION).strength(5, 11).harvestLevel(0).harvestTool(ToolType.SHOVEL).sound(SoundType.NETHER_GOLD_ORE)));
+
     //Special Blocks
 
     private static <T extends Block>RegistryObject<T> registerNoItem(String name, Supplier<T> block) {
