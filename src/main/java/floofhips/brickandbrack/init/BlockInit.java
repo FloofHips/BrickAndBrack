@@ -1,8 +1,6 @@
 package floofhips.brickandbrack.init;
 import floofhips.brickandbrack.ModItemGroup;
-import floofhips.brickandbrack.blocks.HorizontalConnectingBlock;
-import floofhips.brickandbrack.blocks.HorizontalConnectingSlab;
-import floofhips.brickandbrack.blocks.HorizontalConnectingStairs;
+import floofhips.brickandbrack.blocks.*;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
@@ -24,6 +22,7 @@ public class BlockInit {
     // Plants
 
     public static final RegistryObject<Block> BUSH_BLOCK = register("bush_block", () -> new Block(AbstractBlock.Properties.of(Material.DECORATION).strength(0.2F).sound(SoundType.SWEET_BERRY_BUSH).noOcclusion()));
+    public static final RegistryObject<Block> SHRUB = register("shrub", () -> new Block(AbstractBlock.Properties.of(Material.DECORATION).strength(0.2F).sound(SoundType.SWEET_BERRY_BUSH).noOcclusion()));
 
     // LightSources
 
@@ -35,6 +34,11 @@ public class BlockInit {
 
     public static final RegistryObject<Block> PEBBLED_DIRT = register("pebbled_dirt", () -> new Block(AbstractBlock.Properties.of(Material.DECORATION).strength(5, 11).harvestLevel(0).harvestTool(ToolType.SHOVEL).sound(SoundType.BASALT)));
     public static final RegistryObject<Block> DIRTY_PEBBLES = register("dirty_pebbles", () -> new Block(AbstractBlock.Properties.of(Material.DECORATION).strength(5, 11).harvestLevel(0).harvestTool(ToolType.SHOVEL).sound(SoundType.NETHER_GOLD_ORE)));
+
+    //Connectors
+
+    public static final RegistryObject<Block> LARGE_CHAINS = register("large_chains", () -> new ConnectingPillarBlock(AbstractBlock.Properties.of(Material.DECORATION).strength(2).harvestTool(ToolType.AXE).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> OAK_POLE = register("oak_pole", () -> new ConnectingPillarBlock(AbstractBlock.Properties.of(Material.DECORATION).strength(2).harvestTool(ToolType.AXE).sound(SoundType.WOOD)));
 
     //Special Blocks
 

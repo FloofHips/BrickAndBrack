@@ -78,8 +78,9 @@ public class BrickAndBrack
     }
 
     private void clientSetup(final FMLClientSetupEvent event) {
-        RenderTypeLookup.setRenderLayer(BlockInit.BUSH_BLOCK.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.SHRUB.get(), RenderType.cutout());
         RenderTypeLookup.setRenderLayer(BlockInit.LATTICE_BLOCK.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.LARGE_CHAINS.get(), RenderType.cutout());
     }
 
 }
