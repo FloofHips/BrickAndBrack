@@ -37,7 +37,7 @@ public class BlockInit {
 
     //Connectors
 
-    public static final RegistryObject<Block> LARGE_CHAINS = register("large_chains", () -> new ConnectingPillarBlock(AbstractBlock.Properties.of(Material.DECORATION).strength(2).harvestTool(ToolType.AXE).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> LARGE_CHAINS = register("large_chains", () -> new ChainsBlock(AbstractBlock.Properties.of(Material.DECORATION).strength(2).harvestTool(ToolType.AXE).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> OAK_POLE = register("oak_pole", () -> new ConnectingPillarBlock(AbstractBlock.Properties.of(Material.DECORATION).strength(2).harvestTool(ToolType.AXE).sound(SoundType.WOOD)));
 
     //Special Blocks

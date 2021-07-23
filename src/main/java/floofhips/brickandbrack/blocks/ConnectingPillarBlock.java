@@ -76,8 +76,7 @@ public class ConnectingPillarBlock extends SixWayBlock/* implements IWaterLoggab
       //  return facingState.is(this);
         Block block = facingState.getBlock();
         boolean flag = block instanceof ConnectingPillarBlock;
-        boolean flag1 = block instanceof FenceGateBlock && FenceGateBlock.connectsToDirection(facingState, opposite);
-        return !isExceptionForConnection(block) && solidSide || flag || flag1;
+        return !isExceptionForConnection(block) && solidSide || flag;
 
     }
 }
