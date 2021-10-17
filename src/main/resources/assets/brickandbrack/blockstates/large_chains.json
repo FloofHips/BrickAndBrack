@@ -17,11 +17,59 @@
       "apply": {
         "model": "brickandbrack:block/poles/large_chains_link", "x": 90 } },
 
+    {
+      "when": {
+        "axis": "y",
+        "up": "true"
+      },
+      "apply": {
+        "model": "brickandbrack:block/poles/large_chains_half", "x": 180 }
+    },
 
-    { "when": { "up": "true" },
-	"apply": { "model": "brickandbrack:block/poles/large_chains_half", "x": 180 } },
+    {
+      "when": {
+        "axis": "y",
+        "down": "true"
+      },
+      "apply": {
+        "model": "brickandbrack:block/poles/large_chains_half"}
+    },
 
-    { "when": { "down": "true" },
-	"apply": { "model": "brickandbrack:block/poles/large_chains_half" } }
+{
+      "when": {
+        "axis": "z",
+        "up": "true"
+      },
+      "apply": {
+        "model": "brickandbrack:block/poles/large_chains_half", "x": 90 }
+    },
+
+    {
+      "when": {
+        "axis": "z",
+        "down": "true"
+      },
+      "apply": {
+        "model": "brickandbrack:block/poles/large_chains_half", "x": -90 }
+    },
+
+{
+      "when": {
+        "axis": "x",
+        "up": "true"
+      },
+      "apply": {
+        "model": "brickandbrack:block/poles/large_chains_half", "x": -90, "y": 90 }
+    },
+
+    {
+      "when": {
+        "axis": "x",
+        "down": "true"
+      },
+      "apply": {
+        "model": "brickandbrack:block/poles/large_chains_half", "x": 90, "y": 90 }
+    }
+
     ]
 }
