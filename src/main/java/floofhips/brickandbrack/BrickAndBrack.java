@@ -11,6 +11,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
@@ -31,13 +32,15 @@ public class BrickAndBrack
     public static final String MOD_ID = "brickandbrack";
 
     public BrickAndBrack() {
+        IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         InitContent.register();
 
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
+        bus.addListener(this::setup);
+        bus.addListener(this::dataSetup);
+        bus.addListener(this::enqueueIMC);
+        bus.addListener(this::processIMC);
+        bus.addListener(this::doClientStuff);
+        bus.addListener(this::clientSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -77,24 +80,19 @@ public class BrickAndBrack
         RenderTypeLookup.setRenderLayer(BlockInit.LARGE_CHAINS.get(), RenderType.cutout());
     }
 
-
     private void dataSetup(GatherDataEvent event)
     {
         DataGenerator dataGenerator = event.getGenerator();
-        ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         if (event.includeServer())
         {
-            BlockTagGen blockTagGen = new BlockTagGen(dataGenerator, existingFileHelper);
             dataGenerator.addProvider(new RecipeGen(dataGenerator));
             dataGenerator.addProvider(new LootTableGen(dataGenerator));
-            dataGenerator.addProvider(blockTagGen);
-            dataGenerator.addProvider(new ItemTagGen(dataGenerator, blockTagGen, existingFileHelper));
         }
-//        if (event.includeClient())
-//        {
-//              dataGenerator.addProvider(new LanguageGen(dataGenerator, brickandbrack , String ));
-//              dataGenerator.addProvider(new ItemModelGen(dataGenerator));
-//        }
+        if (event.includeClient())
+        {
+            dataGenerator.addProvider(new LanguageGen(dataGenerator));
+            dataGenerator.addProvider(new ItemModelGen(dataGenerator));
+        }
     }
 
 }

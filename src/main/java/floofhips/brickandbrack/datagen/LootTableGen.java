@@ -51,6 +51,7 @@ public class LootTableGen extends ForgeLootTableProvider {
             this.dropSelf(BlockInit.ROOFING_STAIRS.get());
             this.dropSelf(BlockInit.SHRUB.get());
             this.dropSelf(BlockInit.TILE_BLOCK.get());
+            this.dropSelf(BlockInit.OAK_POLE.get());
 
 //            this.dropOther(ModBlocks.EXAMPLE_BLOCK.get(), Blocks.STONE);
 //            this.add(ModBlocks.EXAMPLE_BLOCK.get(), (block) -> createSingleItemTableWithSilkTouch(block, Blocks.STONE));
