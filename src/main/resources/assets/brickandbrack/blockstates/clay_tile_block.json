@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "brickandbrack:block/clay_tile_block"
+    }
+  }
+}

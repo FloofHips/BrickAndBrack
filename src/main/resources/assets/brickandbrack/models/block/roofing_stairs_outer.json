@@ -1,9 +1,0 @@
-{   "parent": "brickandbrack:block/directional_stairs_outer",
-    "textures": {
-        "particle": "#top",
-        "top": "brickandbrack:block/roofing_block_outer_top",
-        "bottom": "brickandbrack:block/roofing_block_bottom",
-        "side": "brickandbrack:block/roofing_stairs_side",
-        "back": "brickandbrack:block/roofing_block_side"
-    }
-}

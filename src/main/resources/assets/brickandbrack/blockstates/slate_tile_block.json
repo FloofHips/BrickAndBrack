@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "brickandbrack:block/slate_tile_block"
+    }
+  }
+}

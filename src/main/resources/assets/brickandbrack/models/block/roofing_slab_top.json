@@ -1,8 +1,0 @@
-{   "parent": "minecraft:block/slab_top",
-    "textures": {
-        "particle": "#top",
-        "top": "brickandbrack:block/roofing_block_top",
-        "bottom": "brickandbrack:block/roofing_block_bottom",
-        "side": "brickandbrack:block/roofing_slab_side"
-    }
-}

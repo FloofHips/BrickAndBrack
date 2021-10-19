@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "particle": "#top",
+    "top": "brickandbrack:block/clay_tile_block_top",
+    "bottom": "brickandbrack:block/clay_roofing_block_bottom",
+    "side": "brickandbrack:block/clay_roofing_block_side"
+  }
+}

@@ -1,0 +1,9 @@
+{   "parent": "brickandbrack:block/directional_stairs_inner",
+    "textures": {
+        "particle": "#top",
+        "top": "brickandbrack:block/slate_roofing_block_inner_top",
+        "bottom": "brickandbrack:block/slate_roofing_block_bottom",
+        "side": "brickandbrack:block/slate_roofing_stairs_side",
+        "back": "brickandbrack:block/slate_roofing_block_side"
+    }
+}
